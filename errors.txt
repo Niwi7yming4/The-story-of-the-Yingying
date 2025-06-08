@@ -1,0 +1,14 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 59: end of line expected.
+    show char3, slightly_higher
+              ^
+
+File "game/script.rpy", line 152: end of line expected.
+    show char6, slightly_higher
+              ^
+
+Ren'Py Version: Ren'Py 8.3.7.25031702
+Sun Jun  8 11:19:21 2025

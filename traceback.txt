@@ -1,0 +1,36 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 55, in script
+    pause(0.1, hard=True)
+  File "renpy/common/000statements.rpy", line 456, in execute_pause
+    delay = eval(p["delay"])
+SyntaxError: invalid syntax (game/script.rpy, line 55)
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 55, in script
+    pause(0.1, hard=True)
+  File "C:\Users\ASUS\Desktop\renpy-8.3.8.25052302+nightly-sdk\renpy\ast.py", line 1987, in execute
+    self.call("execute")
+  File "C:\Users\ASUS\Desktop\renpy-8.3.8.25052302+nightly-sdk\renpy\ast.py", line 1966, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\ASUS\Desktop\renpy-8.3.8.25052302+nightly-sdk\renpy\statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 456, in execute_pause
+    delay = eval(p["delay"])
+  File "C:\Users\ASUS\Desktop\renpy-8.3.8.25052302+nightly-sdk\renpy\python.py", line 1216, in py_eval
+    code = py_compile(code, 'eval')
+  File "C:\Users\ASUS\Desktop\renpy-8.3.8.25052302+nightly-sdk\renpy\python.py", line 1153, in py_compile
+    raise e
+  File "C:\Users\ASUS\Desktop\renpy-8.3.8.25052302+nightly-sdk\renpy\python.py", line 1090, in py_compile
+    raise orig_e
+  File "C:\Users\ASUS\Desktop\renpy-8.3.8.25052302+nightly-sdk\renpy\python.py", line 1082, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: invalid syntax (game/script.rpy, line 55)
+
+Windows-10-10.0.26100 AMD64
+Ren'Py 8.3.7.25031702
+鶯鶯傳之渣男是你嗎? 0.1
+Sun Jun  8 11:28:36 2025
