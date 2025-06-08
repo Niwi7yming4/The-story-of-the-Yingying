@@ -102,7 +102,7 @@ define gui.textbox_yalign = 1.0
 
 ## 對話角色的名字相對於文本框的位置。這些可以是從左側或頂部開始的整數像素，也可
 ## 以是到中心的 0.5 個像素
-define gui.name_xpos = 100
+define gui.name_xpos = 250
 define gui.name_ypos = 0
 
 ## 角色名稱的水平對齊方式。左對齊可以為 0.0，居中對齊可以為 0.5，右對齊可以為
@@ -122,11 +122,11 @@ define gui.namebox_tile = False
 
 ## 對話相對於文本框的位置。這些可以是相對於文字方塊左側或頂部的整數像素，或相對
 ## 於中心的 0.5 個像素
-define gui.dialogue_xpos = 200
+define gui.dialogue_xpos = 300
 define gui.dialogue_ypos = 75
 
 ## 對話文字的最大寬度，以像素為單位
-define gui.dialogue_width = 1000
+define gui.dialogue_width = 1116
 
 ## 對話文字的水平對齊方式。左對齊可以為 0.0，居中對齊可以為 0.5，右對齊可以為
 ## 1.0
