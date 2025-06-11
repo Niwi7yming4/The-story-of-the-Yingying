@@ -24,7 +24,7 @@ define gui.show_name = False
 
 ## 遊戲的版本
 
-define config.version = "0.3"
+define config.version = "0.5.2"
 
 
 ## 放置在遊戲的關於螢幕上的文字。將文字放在三引號之間，並在段落之間留一個空行。
