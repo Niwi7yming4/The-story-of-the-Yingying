@@ -9,6 +9,13 @@ define y = Character("鶯鶯")
 define zf = Character("鄭婦")
 define r = Character("紅娘")
 define aaa = Character("？？？", color="#FF0000")
+define li = Character("梁倡瑋", color="#FF0000")
+define n1 = Character("評審1")
+define n2 = Character("余濤大師")
+define dan = Character("但丁")
+define chan = Character("成振宇")
+define gob = Character("歌殺")
+define dra = Character("美式山海經推銷員")
 
 # 遊戲從這裡開始。
 transform slightly_higher:
@@ -54,7 +61,7 @@ label end1:
     scene gameover1
     with Pause(2.0)
     window show
-    white "如果某一日他能看見來自異世界的鶯鶯傳會發現自己原來這麼渣，\n恭喜獲得結局{color=#FF0000}「孤老終生-打了一輩子的光棍還在適不我值」{/color}"
+    "如果某一日他能看見來自異世界的鶯鶯傳會發現自己原來這麼渣，\n恭喜獲得結局{color=#FF0000}「孤老終生-打了一輩子的光棍還在適不我值」{/color}"
     return
     
 label story1:
@@ -142,7 +149,7 @@ label end2:
     with Pause(2.0)
     window show
     show gameover2
-    white "在京城娶了一女，一生汲汲營營，沒有什麼功過。\n恭喜獲得結局{color=#FF0000}「中庸之輩-一輩子什麼大事都沒幹，死了連渣都不剩」{/color}"
+    "在京城娶了一女，一生汲汲營營，沒有什麼功過。\n恭喜獲得結局{color=#FF0000}「中庸之輩-一輩子什麼大事都沒幹，死了連渣都不剩」{/color}"
     return
 
 label story3:
@@ -309,7 +316,7 @@ label story4:
     show bg38
     white "說完後，鶯鶯也就離開了。你失魂甚久，最後只好拖著疲憊的身軀\n翻過牆，用頭撞了撞杏樹，帶著髮梢上無處可逃的落葉片子，踩著\n蹣跚的步伐回家了。"
     show bg39
-    white "數個夜晚，你倚著窗，窗前獨唱著如願中的「而我將愛你所愛的人間 \n願你所願的笑顏」方唱罷，眼光忽滅，視線模糊了起來，欲要闔上\n小眼珠子打個盹。"
+    white "數個夜晚，你倚著窗，窗前獨唱著{color=#FF0000}如願中的「而我將愛你所愛的人間 \n願你所願的笑顏」{/color}方唱罷，眼光忽滅，視線模糊了起來，欲要闔上\n小眼珠子打個盹。"
     scene bg4
     show bg40
     white "突然一個人拿著枕頭往你臉上拷過去，你昏昏迷迷間，看見的是一個人\n，你趕緊定睛一看，發現正是紅娘。"
@@ -356,6 +363,7 @@ label story4:
 label tell_zheng:
     show char2 at right, slightly_higher
     y "沒關係的，我會去說的......"
+    hide char2
     menu:
         "「義無反顧地去找鄭姨。」":
             jump specialend1
@@ -368,13 +376,13 @@ label end4:
     window hide
     with Pause(2.0)
     window show
-    white "恭喜獲得結局{color=#FF0000}「后宮王-你的姿色未減，仍是一條好漢」{/color}"
+    "恭喜獲得結局{color=#FF0000}「后宮王-你的姿色未減，仍是一條好漢」{/color}"
     return
 
 label story5:
     show bg53
-    white "不久後，你選擇去了長安，將想法告訴鶯鶯後，鶯鶯並未為難你什麼\n，但她愁怨的眸光卻無法遮掩住。"
-    white "要走的第二個晚上，鶯鶯沒有再來。你就這樣去往了長安。"
+    white "不久後，你選擇去了長安，將想法告訴鶯鶯後，鶯鶯並未為難你什麼\n，但她愁怨的眸光卻瞞不住你。"
+    white "要走的前一個晚上，鶯鶯沒有再來。你就這樣去往了長安。"
     show bg54
     white "數月後，張生回到蒲州，在崔家住了幾個月。"
     show bg55
@@ -383,7 +391,28 @@ label story5:
     white "她對你的情意深厚，卻從未說出口，常常在艷麗的面容上微蹙著眉頭\n，像愁怨鎖心頭。眼中盡是幽邃，卻從未展現，像無知的女孩子。\n明明有顆喜怨瞋心，但卻從不讓人看見過。"
     show bg57
     white "有天深幽的天氣，她獨自操琴，愁容未解，弦中淒惻。\n你在旁邊偷偷聽到了，求鶯鶯再彈一次，但她卻未曾撫過琴。"
-    white "按照我的想法，做到這邊應該算0.5版本了。"
+    show bg61
+    white "剩下後來的事各位也知道了，張生未能中第逗留京師，兩人之間互相\n傳信，信中內容也在時人中流傳。"
+    window hide
+    scene bg4
+    show poem1 at shrink_bg
+    with Pause(2.0)
+    window show
+    white "後來便有了著名的元稹的{color=#FF0000}會真詩三十韻{/color}......"
+    white "而之所以讓後人廣為嘆息，讓現代人認為張生渣的緣由，是他後來在\n評價鶯鶯中說道:"
+    show bg62
+    show char3 at right, slightly_higher
+    z "{color=#FF0000}大凡天之所命尤物也，不妖其身，必妖於人。使崔氏子遇合富貴，\n乘寵嬌，不為雲，不為雨，為蛟為螭，吾不知其所變化矣。{/color}"
+    z "{color=#FF0000}昔殷之辛，周之幽，據百萬之國，其勢甚厚。然而一女子敗之，\n潰其眾，屠其身，至今為天下僇笑。予之德不足以勝妖孽，是用忍情。{/color}"
+    hide char3
+    show bg63
+    white "唉！他將鶯鶯訴之為紅顏禍水，{color=#FF0000}而不想想自己的問題{/color}，這是\n出於求而不得的心，張生的心中必然有鶯鶯，但這麼形容連我\n也想把張生扒下去。"
+    white "一日他想求見鶯鶯，但鶯鶯拒絕了他，兩人互相寫了首詩後，\n從此兩人再不復見。"
+    window hide
+    show bg64
+    with Pause(2.0)
+    window show
+    "恭喜獲得結局{color=#FF0000}「平凡的少年與錯過的愛情-張生傳 完」{/color}"
     return
 
 
@@ -392,7 +421,7 @@ label end3:
     with Pause(2.0)
     show bg16
     window show
-    white "恭喜獲得結局{color=#FF0000}「牢中乞兒-在異世界的牢房蹲過三年」{/color}"
+    "恭喜獲得結局{color=#FF0000}「牢中乞兒-在異世界的牢房蹲過三年」{/color}"
     return
 
 
@@ -484,14 +513,32 @@ label specialend1:
             "崩壞值+1，目前崩壞值:{color=#FF0000}[honkai]{/color}"
     if honkai >= 3:
         jump badend
+    if honkai == 0:
+        jump specialend_zero
     white "看來這次你命很好..."
     window hide
     hide screen shaky_texts
     scene bg15
     with Pause(2.0)
-    white "恭喜獲得特殊結局{color=#FF0000}「愛你的鶯鶯」{/color}，能走到這一步，\n你也是很不容易。"
+    white "恭喜獲得特殊結局{color=#FF0000}「愛你的鶯鶯」{/color}，能走到這一步，你也是\n很不容易。"
     return
     
+
+label specialend_zero:
+    scene bg4
+    with dissolve
+    aaa "真的沒想到，你竟然可以到這......"
+    aaa "你是開掛了吧？"
+    hide screen shaky_texts
+    show bg58 at screen_shake
+    li "可惡被發現了！只能這樣了！"
+    show bg59 at screen_shake
+    with Pause(1.0)
+    with dissolve
+    show bg60 at screen_shake
+    "恭喜獲得結局{color=#FF0000}「破裂的真相-虛假世界中的虛假世界」{/color}"
+    return
+
 
 label badend:
     window hide
@@ -503,7 +550,12 @@ label badend:
     "恭喜獲得特殊結局{color=#FF0000}「School Day-斬殺結局，你被賜予了\n大男人剖腹產。」{/color}"
     return
 
-
+transform screen_shake:
+    linear 0.05 xoffset -10
+    linear 0.05 xoffset 10
+    linear 0.05 xoffset -5
+    linear 0.05 xoffset 5
+    linear 0.05 xoffset 0
 
 screen shaky_texts:
     for i in range(35):
@@ -522,4 +574,171 @@ transform ShakeAnim:
         repeat
 
 label isekai:
-    white "目前還做，請稍後再來~"
+    scene bg4
+    show bg65
+    menu:
+        "你不知道該去哪裡，此時冒出三個選擇..."
+        "「去長安」":
+            jump specialstory1
+        "「去無名客棧」":
+            jump isekai2
+        "「去路邊小徑上廁所」":
+            jump TRALALERO
+    return
+
+label isekai2:
+    show bg66
+    white "你走入了無名客棧內，聽說這裡很奇異，沒錯...我說的是人很\n奇異！"
+    white "此時有三個人吸引了你的目光，那三個人模樣很奇異......"
+    show bg68
+    menu:
+        "「第一個奇異的人」":
+            show char7 at truecenter
+            jump describe_char7
+        "「第二個奇異的人」":
+            show char11 at truecenter
+            jump describe_char11
+        "「第三個奇異的人」":
+            show char10 at truecenter
+            jump describe_char10
+        "「看完三人的樣貌了」":
+            pass
+    menu:
+        "「你選擇要跟誰攀談呢？」"
+        "「第一個奇異的人」":
+            show char7 at truecenter
+            jump isekai3
+        "「第二個奇異的人」":
+            show char11 at truecenter
+            jump isekai4
+        "「第三個奇異的人」":
+            show char10 at truecenter
+            jump isekai5
+    return
+
+label isekai3:
+    show bg68
+    hide char7
+    show char7 at right,slightly_higher
+    show char3 at left,slightly_higher
+    z"在下一書生也，想像你一樣學習如何除魔衛道。"
+    dan "我？呵，教你點東西倒不難……只怕你吃不了這苦頭。"
+    show bg76
+    white "從這天起，你與但丁進行了高強度訓練..."
+    scene bg4
+    show bg77
+    white "有一日你與但丁聽到有女子喊救命，原來是那個張生尚未見過的鶯鶯\n正呼喊著。"
+    show bg78
+    white "只見鶯鶯的面前有著一隻惡魔，此時但丁手起刀落解決了牠..."
+    show bg79
+    white "從此鶯鶯愛上了但丁...而張生在殺魔的道路上愈走愈遠，\n直到但丁望塵莫及......"
+    window hide
+    show bg80
+    with Pause(2.0)
+    window show
+    "恭喜獲得結局{color=#FF0000}「屠魔者，張生也-女人只會影響我拔刀的速度」{/color}"
+    return
+
+label isekai4:
+    show bg68
+    hide char11
+    show char11 at right,slightly_higher
+    show char3 at left,slightly_higher
+    z "在下張生也，不知閣下為何穿著如此奇異呢？"
+    chan"你好阿，我是成振宇，我不知道什麼原因就來到這了..."
+    show bg81
+    white "你們倆人剛進行攀談，世界立刻大變，來到了首爾，此時你\n們面前出現了E級地下城..."
+    white "你們當即決定向內探索，結果遇到了雙重地下城..."
+    show bg83
+    white "神殿內部矗立著數十座巨大石像，中間一尊特別巨大、手持\n權杖與聖杯，神情詭異。"
+    white "而你突然動作了起來，很倒楣的你成為了犧牲者..."
+    window hide
+    scene bg4
+    show bg82
+    with Pause(2.0)
+    window show
+    "恭喜獲得結局{color=#FF0000}「雕像下的亡魂-一份來自首爾的死亡凝視」{/color}"
+    return
+
+label isekai5:
+    show bg68
+    hide char10
+    show char10 at right,slightly_higher
+    show char3 at left,slightly_higher
+    z "你好在下張生你這身盔甲看起來很有特色，是從大秦來的嗎？"
+    gob "我不知道你在說什麼..."
+    z "啊，抱歉。只是第一次見到像你這樣不露面的武人。你平時都在做\n什麼？"
+    gob "殺哥布林。"
+    z "哥布林？那是什麼樣的妖邪？"
+    gob "骯髒、殘忍、卑鄙。若你見過他們對女人做的事，你就不會再問\n這種話了。"
+    z "……我可以學習嗎？你這樣的本事，我很想知道。"
+    gob "不建議。但……你還活著，表示你還沒犯下致命錯誤。"
+    show bg84
+    white "突然世界大變，你與哥殺突然來到了一個洞穴前..."
+    scene bg4
+    show bg85
+    white "你被一隻哥布林偷襲而亡...但你奇蹟般的重生了..."
+    window hide
+    show bg86
+    with Pause(2.0)
+    window show
+    "恭喜獲得結局{color=#FF0000}「關於我轉生到異世界成為哥布林這檔事」{/color}"
+    return
+
+
+label describe_char7:
+    "這個人有一頭銀白色的頭髮，穿著一身血紅大氅，攜帶著不合時代的\n槍械......"
+    hide char7
+    jump isekai2
+
+label describe_char11:
+    "這個人看起來平凡瘦弱，有著一頭黑色短髮，前方有些微碎瀏海。"
+    hide char11
+    jump isekai2
+
+label describe_char10:
+    "這個人帶著深灰色金屬頭盔，眼神是凌厲般的血紅。"
+    hide char10
+    jump isekai2
+
+
+label specialstory1:
+    show bg69
+    white "你在長安的路上，被時光警察誤撞了，結果就來到了那一年的\n《頂級廚師》..."
+    show bg70
+    white "一番機緣巧合下，你成為了這裡的評審......"
+    show bg71
+    white "你也很幸運地看到了熟悉的小胖......"
+    show bg75
+    white "很快的，一盤新鮮的九轉大腸就出爐了！"
+    show bg72
+    n1 "是故意的，還是不小心的..."
+    show bg74
+    n2 "是故意的..."
+    scene bg4
+    show bg67
+    white "評審們依序嘗了一口原汁原味..."
+    show bg73
+    white "當你咬了一口後說出了一句話...真香啊..."
+    window hide
+    show bg75
+    with Pause(2.0)
+    window show
+    "恭喜獲得結局{color=#FF0000}「九轉大腸-那一年的腸汁依舊保留著它的原汁原味」{/color}"
+    return
+
+label TRALALERO:
+    show bg87
+    show char3 at left,slightly_higher
+    show char12 at right,
+    dra "你好我是美式山海經推銷員，你要成為我們的一員嗎？"
+    z "你是？"
+    dra "我是{color=#FF0000}tralalero tralala{/color}的信徒，來傳播{color=#FF0000}tralalero tralala{/color}的。"
+    show bg88
+    white "你雖然感到奇怪，但由於實在是太魔性了，你就一起推廣\n了！"
+    window hide
+    show bg89
+    with Pause(2.0)
+    window show
+    "恭喜獲得結局{color=#FF0000}「Tralalero tralala～～～」{/color}"
+    return

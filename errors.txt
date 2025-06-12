@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 297: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    menu:
-    ^
+File "game/script.rpy", line 589: show statement expects a non-empty block.
+    show char7 at left, slightly_higher:
+                                        ^
+
+File "game/script.rpy", line 592: show statement expects a non-empty block.
+    show char11 at truecenter:
+                              ^
+
+File "game/script.rpy", line 595: show statement expects a non-empty block.
+    show char10 at right, slightly_higher:
+                                          ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Tue Jun 10 23:44:48 2025
+Thu Jun 12 23:51:22 2025
